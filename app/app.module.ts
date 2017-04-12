@@ -11,6 +11,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 import { SharedModule } from './pages/shared';
 
+import {MomentModule} from 'angular2-moment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { SharedModule } from './pages/shared';
     NativeScriptModule,
     NativeScriptHttpModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    MomentModule
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
