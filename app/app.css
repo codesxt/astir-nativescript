@@ -1,0 +1,24 @@
+@import url('~/platform.css');
+@import "nativescript-theme-core/css/core.light.css";
+@import "nativescript-theme-core/css/forest.css";
+
+.page-text {
+  vertical-align: center;
+  text-align: center;
+}
+
+.action-bar {
+  background-color: #AA0000;
+}
+
+.small-spacing {
+  margin: 5;
+}
+
+.medium-spacing {
+  margin: 10;
+}
+
+Page {
+  background-color: white;
+}

@@ -1,0 +1,15 @@
+<ActionBar [title]="title" class="action-bar">
+</ActionBar>
+
+<side-drawer-page>
+  <GridLayout class="p-10">
+    <ListView [items]="eventList" class="small-spacing">
+      <template let-item="item">
+        <GridLayout columns="auto, *" rows="auto">
+          <Label col="0" [text]="item.when.start" class="medium-spacing"></Label>
+          <Label col="1" [text]="item.title" class="medium-spacing"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
+  </GridLayout>
+</side-drawer-page>
