@@ -24,10 +24,11 @@ export class EventListService {
         eventList.push(new Event(
           event.id,
           event.title,
-          event.summary,
+          event.category,
+          event.description,
           event.when,
-          event.cost,
-          event.where)
+          event.where,
+          event.cost)
         );
       });
       return eventList;

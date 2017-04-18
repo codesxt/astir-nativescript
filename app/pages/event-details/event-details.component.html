@@ -1,0 +1,86 @@
+<ActionBar title="Detalles del Evento" class="action-bar">
+  <NavigationButton text="Atrás" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<side-drawer-page>
+  <StackLayout>
+      <Label
+          class="h1 page-text"
+          [text]="event.title"
+          textWrap="true">
+      </Label>
+      <TextView [text]="event.description" hint="" [editable]="false"
+        class="input input-border"></TextView>
+      <StackLayout class="m-10">
+        <Label
+          class="detail-label"
+          text="Categoría"
+          textWrap="true">
+        </Label>
+        <Label
+          [text]="event.category | categoryTranslate"
+          textWrap="true">
+        </Label>
+      </StackLayout>
+      <StackLayout class="m-10">
+        <Label
+          class="detail-label"
+          text="Fecha"
+          textWrap="true">
+        </Label>
+        <Label
+          [text]="event.when.start | amDateFormat:'DD/MM/YYYY HH:mm'"
+          textWrap="true">
+        </Label>
+        <Label
+          class="detail-label"
+          text="Duración"
+          textWrap="true">
+        </Label>
+        <Label
+          [text]="event.when.finish | amDifference : event.when.start : 'minutes'"
+          textWrap="true">
+        </Label>
+      </StackLayout>
+      <StackLayout class="m-10">
+        <Label
+          class="detail-label"
+          text="Ubicación"
+          textWrap="true">
+        </Label>
+        <Label
+          [text]="event.where.address"
+          textWrap="true">
+        </Label>
+      </StackLayout>
+      <StackLayout class="m-10">
+        <Label
+          class="detail-label"
+          text="Costo"
+          textWrap="true">
+        </Label>
+        <Label
+          *ngIf="event.cost.length==0"
+          text="Entrada Liberada"
+          textWrap="true">
+        </Label>
+        <ListView
+          *ngIf="event.cost.length>0"
+          [items]="event.cost"
+          class="small-spacing m-5">
+          <ng-template let-item="item">
+            <StackLayout orientation="horizontal">
+              <Label
+                [text]="item.text"
+                textWrap="true">
+              </Label>
+              <Label
+                [text]="item.value"
+                textWrap="true">
+              </Label>
+            </StackLayout>
+          </ng-template>
+        </ListView>
+      </StackLayout>
+  </StackLayout>
+</side-drawer-page>

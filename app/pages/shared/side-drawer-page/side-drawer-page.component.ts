@@ -50,7 +50,12 @@ export class SideDrawerPageComponent implements AfterViewInit, OnDestroy {
     private page: Page,
     private ngZone: NgZone
   ) {
-    this.setActionBarIcon(this.page);
+    let currentUrl = this.routerExtensions.router.routerState.snapshot.url;
+    let isInRoot = false;
+    for(var i=0;i<this.navMenu.length;i++){
+      isInRoot = (this.navMenu[i].commands[0] == currentUrl) ? true : isInRoot;
+    }
+    if(isInRoot) this.setActionBarIcon(this.page);    
     this.setDrawerTransition();
   }
 

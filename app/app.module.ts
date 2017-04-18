@@ -8,17 +8,24 @@ import { AppRoutingModule } from './pages/app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { EventDetailsComponent } from './pages/event-details/event-details.component';
 
 import { SharedModule } from './pages/shared';
 
 import {MomentModule} from 'angular2-moment';
+
+import { StringFormatPipe } from './pipes/string-format';
+import { CategoryTranslatePipe } from './pipes/category-translate';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    EventDetailsComponent,
+    StringFormatPipe,
+    CategoryTranslatePipe
   ],
   imports: [
     NativeScriptModule,

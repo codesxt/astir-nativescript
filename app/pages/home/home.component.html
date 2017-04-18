@@ -2,14 +2,32 @@
 </ActionBar>
 
 <side-drawer-page>
-  <GridLayout class="p-10">
-    <ListView [items]="eventList" class="small-spacing">
-      <template let-item="item">
-        <GridLayout columns="auto, *" rows="auto">
-          <Label col="0" [text]="item.when.start | amTimeAgo" class="medium-spacing"></Label>
-          <Label col="1" [text]="item.title" class="medium-spacing"></Label>
+  <GridLayout>
+    <ListView [items]="eventList" (itemTap)="showDetails($event)" class="small-spacing m-5">
+      <ng-template let-item="item">
+        <GridLayout columns="80, *" rows="auto">
+          <StackLayout col="0" orientation="vertical" class="event-ticket">
+            <Label
+              [text]="item.when.start | amDateFormat:'DD'"
+              class="m-t-20 m-l-5 m-b-2 event-day">
+            </Label>
+            <Label
+              [text]="item.when.start | amDateFormat:'MMM' | stringFormat:'capitalizeFirst'"
+              class="m-t-2 m-l-5 m-b-2">
+            </Label>
+            <Label
+              [text]="item.category | categoryTranslate"
+              class="m-t-2 m-l-5 m-b-5 m-r-5">
+            </Label>
+          </StackLayout>
+          <StackLayout col="1">
+            <Label [text]="item.title" class="m-t-5 m-l-5"></Label>
+            <Label [text]="item.description" class="m-t-2 m-l-5"></Label>
+            <Label [text]="item.when.start | amTimeAgo | stringFormat:'capitalizeFirst'" class="m-t-2 m-l-5"></Label>
+            <Label [text]="item.where.address" class="m-t-2 m-l-5"></Label>
+          </StackLayout>
         </GridLayout>
-      </template>
+      </ng-template>
     </ListView>
   </GridLayout>
 </side-drawer-page>
