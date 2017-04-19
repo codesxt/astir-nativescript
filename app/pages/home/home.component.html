@@ -1,4 +1,11 @@
 <ActionBar [title]="title" class="action-bar">
+  <ActionItem
+    (tap)="openFilter($event)"
+    ios.systemIcon="12"
+    ios.position="right"
+    android.systemIcon="ic_menu_search"
+    android.position="actionBar">
+  </ActionItem>
 </ActionBar>
 
 <side-drawer-page>

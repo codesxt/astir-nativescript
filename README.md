@@ -9,3 +9,9 @@ Tools:
 
 Transition Documentation:
 * http://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationtransition.html#name
+
+Font Awesome Cheatsheet:
+* http://fontawesome.io/cheatsheet/
+
+'Esta aplicación usa la plantilla: nativescript-angular-drawer-template.' +
+'Para instalar: tns create my-project-name --template nativescript-angular-drawer-template';

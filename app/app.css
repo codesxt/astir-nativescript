@@ -2,9 +2,16 @@
 @import "nativescript-theme-core/css/core.light.css";
 @import "nativescript-theme-core/css/forest.css";
 
-.page-text {
+.page-title {
   vertical-align: center;
   text-align: center;
+  font-family: "RisingSun-Light";
+}
+
+.page-text {
+  vertical-align: center;
+  text-align: left;
+  font-family: "RisingSun-Light";
 }
 
 .action-bar {
@@ -75,3 +82,18 @@ Page {
    from { opacity: 0; }
    to { opacity: 1; }
  }
+
+ /*
+  * Icons
+  */
+.icon {
+   font-family: 'fontawesome-webfont';
+   font-size: 32;
+}
+
+/*
+ * SideDrawer overrides
+ */
+.sidedrawer-list-item-text{
+  font-family: "RisingSun-Light";
+}

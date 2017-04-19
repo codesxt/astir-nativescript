@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Event } from "../../shared/event/event";
 import { EventListService } from "../../shared/event/event-list.service";
+import { Observable, EventData } from 'data/observable';
 
 import { RouterExtensions } from 'nativescript-angular/router';
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
     searchText: "",
     category: "any"
   }
+  iconSearch = String.fromCharCode(0xf002);
   constructor(
     private eventListService: EventListService,
     private routerExtensions: RouterExtensions
@@ -29,7 +31,6 @@ export class HomeComponent implements OnInit {
 
   showDetails(e){
     let event = this.eventList[e.index];
-    //alert("Estás tocando el evento:\n"+JSON.stringify(event));
     this.routerExtensions.navigate(["/event-details"],
       {
         clearHistory: false,
@@ -54,5 +55,10 @@ export class HomeComponent implements OnInit {
       this.isLoading = false;
       this.listLoaded = true;
     });
+  }
+
+  openFilter(args: EventData){
+    console.log("Opening Filter...");
+    alert("Opening Filter...");
   }
 }

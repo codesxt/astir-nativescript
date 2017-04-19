@@ -37,9 +37,9 @@ export class SideDrawerPageComponent implements AfterViewInit, OnDestroy {
    * Navigation Menu Items
    */
   navMenu: any[] = [
-    { name: 'Inicio', commands: ['/'] },
-    { name: 'Acerca de', commands: ['/about'] },
-    { name: 'Contacto', commands: ['/contact'] }
+    { name: 'Inicio', commands: ['/'], icon: String.fromCharCode(0xf015)},
+    { name: 'Acerca de', commands: ['/about'], icon: String.fromCharCode(0xf0c0) },
+    { name: 'Contacto', commands: ['/contact'], icon: String.fromCharCode(0xf2bc) }
   ];
 
   private drawer: SideDrawerType;
@@ -55,7 +55,7 @@ export class SideDrawerPageComponent implements AfterViewInit, OnDestroy {
     for(var i=0;i<this.navMenu.length;i++){
       isInRoot = (this.navMenu[i].commands[0] == currentUrl) ? true : isInRoot;
     }
-    if(isInRoot) this.setActionBarIcon(this.page);    
+    if(isInRoot) this.setActionBarIcon(this.page);
     this.setDrawerTransition();
   }
 

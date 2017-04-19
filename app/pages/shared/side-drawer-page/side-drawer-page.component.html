@@ -1,24 +1,26 @@
 <RadSideDrawer [transition]="drawerTransition">
   <StackLayout tkDrawerContent class="sidedrawer-left">
     <StackLayout class="sidedrawer-header">
-      <!-- Set src attribute to the logo of the app -->
       <Image
-          class="sidedrawer-header-image">
+        src="~/images/logo.png"
+        class="">
       </Image>
-      <Label
-          class="sidedrawer-header-brand"
-          text="Astir">
-      </Label>
     </StackLayout>
     <ScrollView>
       <StackLayout class="sidedrawer-content p-10">
         <GridLayout
-            class="sidedrawer-list-item"
-            *ngFor="let nav of navMenu">
+          columns="50, *"
+          class="sidedrawer-list-item"
+          *ngFor="let nav of navMenu">
+          <Label
+            col="0"
+            [text]="nav.icon"
+            class="icon m-2 m-r-5"></Label>
           <Button
-              class="sidedrawer-list-item-text borderless-btn"
-              [text]="nav.name"
-              (tap)="navigateTo(nav.commands)">
+            col="1"
+            class="sidedrawer-list-item-text borderless-btn"
+            [text]="nav.name"
+            (tap)="navigateTo(nav.commands)">
           </Button>
         </GridLayout>
       </StackLayout>

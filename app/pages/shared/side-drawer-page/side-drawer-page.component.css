@@ -1,7 +1,9 @@
 .sidedrawer-header{
-  padding-top:25;
-  padding-bottom:25;
+  padding-top:10;
+  padding-bottom:10;
   background-color: #A00;
+  /* default height: 148 */
+  height: 110;
 }
 
 .sidedrawer-header .sidedrawer-header-image{
