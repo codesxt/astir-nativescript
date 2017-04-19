@@ -16,6 +16,7 @@ import {MomentModule} from 'angular2-moment';
 
 import { StringFormatPipe } from './pipes/string-format';
 import { CategoryTranslatePipe } from './pipes/category-translate';
+import { EventsFilterPipe } from './pipes/events-filter';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CategoryTranslatePipe } from './pipes/category-translate';
     ContactComponent,
     EventDetailsComponent,
     StringFormatPipe,
-    CategoryTranslatePipe
+    CategoryTranslatePipe,
+    EventsFilterPipe
   ],
   imports: [
     NativeScriptModule,

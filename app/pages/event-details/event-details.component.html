@@ -3,15 +3,19 @@
 </ActionBar>
 
 <side-drawer-page>
-  <StackLayout>
-      <Label
-          class="h1 page-text"
-          [text]="event.title"
-          textWrap="true">
-      </Label>
-      <TextView [text]="event.description" hint="" [editable]="false"
-        class="input input-border"></TextView>
-      <StackLayout class="m-10">
+  <Label
+      class="h1 page-text event-title"
+      [text]="event.title"
+      textWrap="true">
+  </Label>
+  <ScrollView orientation="vertical">
+    <StackLayout>
+      <TextView
+        [text]="event.description"
+        hint=""
+        [editable]="false"
+        class="input input-border event-description"></TextView>
+      <StackLayout class="m-x-10 m-y-5">
         <Label
           class="detail-label"
           text="Categoría"
@@ -22,7 +26,7 @@
           textWrap="true">
         </Label>
       </StackLayout>
-      <StackLayout class="m-10">
+      <StackLayout class="m-x-10 m-y-5">
         <Label
           class="detail-label"
           text="Fecha"
@@ -38,11 +42,11 @@
           textWrap="true">
         </Label>
         <Label
-          [text]="event.when.finish | amDifference : event.when.start : 'minutes'"
+          [text]="(event.when.finish | amDifference : event.when.start : 'minutes') + ' minutos'"
           textWrap="true">
         </Label>
       </StackLayout>
-      <StackLayout class="m-10">
+      <StackLayout class="m-x-10 m-y-5">
         <Label
           class="detail-label"
           text="Ubicación"
@@ -53,7 +57,7 @@
           textWrap="true">
         </Label>
       </StackLayout>
-      <StackLayout class="m-10">
+      <StackLayout class="m-x-10 m-y-5">
         <Label
           class="detail-label"
           text="Costo"
@@ -64,23 +68,23 @@
           text="Entrada Liberada"
           textWrap="true">
         </Label>
-        <ListView
-          *ngIf="event.cost.length>0"
-          [items]="event.cost"
-          class="small-spacing m-5">
-          <ng-template let-item="item">
-            <StackLayout orientation="horizontal">
-              <Label
-                [text]="item.text"
-                textWrap="true">
-              </Label>
-              <Label
-                [text]="item.value"
-                textWrap="true">
-              </Label>
-            </StackLayout>
-          </ng-template>
-        </ListView>
+        <StackLayout *ngIf="event.cost.length>0">
+          <GridLayout
+            *ngFor="let cost of event.cost"
+            columns="*, auto">
+            <Label
+              col="0"
+              [text]="cost.text"
+              textWrap="true">
+            </Label>
+            <Label
+              col="1"
+              [text]="'$'+cost.value"
+              textWrap="true">
+            </Label>
+          </GridLayout>
+        </StackLayout>
       </StackLayout>
-  </StackLayout>
+    </StackLayout>
+  </ScrollView>
 </side-drawer-page>

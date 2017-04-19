@@ -28,6 +28,9 @@ Page {
 /*
  * Event List Styles
  */
+.event-list {
+  opacity: 0;
+}
 .event-ticket{
   background-color: #AA0000;
   color: white;
@@ -47,7 +50,28 @@ Page {
 /*
  * Event Details Styles
  */
+.event-title{
+  font-family: "RisingSun-Light";
+}
+.event-description{
+  font-family: "RisingSun-Light";
+  font-size: 14;
+}
+
 .detail-label {
   font-weight: bold;
   color: black;
 }
+
+/*
+ * Animation Definitions
+ */
+ .fadeIn{
+   animation-name: show;
+   animation-duration: 1s;
+ }
+
+ @keyframes show {
+   from { opacity: 0; }
+   to { opacity: 1; }
+ }

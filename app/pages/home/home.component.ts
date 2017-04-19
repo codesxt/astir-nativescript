@@ -16,6 +16,12 @@ moment.locale('es');
 export class HomeComponent implements OnInit {
   title: string = 'Eventos';
   eventList: Array<Event> = [];
+  isLoading = false;
+  listLoaded = false;
+  filter = {
+    searchText: "",
+    category: "any"
+  }
   constructor(
     private eventListService: EventListService,
     private routerExtensions: RouterExtensions
@@ -27,7 +33,11 @@ export class HomeComponent implements OnInit {
     this.routerExtensions.navigate(["/event-details"],
       {
         clearHistory: false,
-        animated: false,
+        transition: {
+            name: "slide",
+            duration: 500,
+            curve: "linear"
+        },
         queryParams: {
           event: JSON.stringify(event)
         }
@@ -35,11 +45,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(){
+    this.isLoading = true;
     this.eventListService.load()
     .subscribe(loadedEvents => {
       loadedEvents.forEach((eventObject) => {
         this.eventList.unshift(eventObject);
       });
+      this.isLoading = false;
+      this.listLoaded = true;
     });
   }
 }

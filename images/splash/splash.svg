@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1536"
+   height="2048"
+   viewBox="0 0 406.39999 541.86668"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="/home/bruno/logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.1 r"
+   sodipodi:docname="splash.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient885">
+      <stop
+         style="stop-color:#800000;stop-opacity:1;"
+         offset="0"
+         id="stop881" />
+      <stop
+         style="stop-color:#800000;stop-opacity:0;"
+         offset="1"
+         id="stop883" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient885"
+       id="radialGradient887"
+       cx="203.2"
+       cy="200.17619"
+       fx="203.2"
+       fy="200.17619"
+       r="79.519676"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.4601656,0,6.1827225e-8,3.326716,-296.70575,-394.99605)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="695.83209"
+     inkscape:cy="1455.9051"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     showguides="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,244.86668)"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <rect
+       style="fill:#aa0000;fill-opacity:1;stroke-width:0.26458332"
+       id="rect10"
+       width="406.13541"
+       height="541.86664"
+       x="0"
+       y="-244.86665" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Logo"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       ry="0"
+       y="-1.1126184e-07"
+       x="0"
+       height="541.86664"
+       width="406.39999"
+       id="rect74"
+       style="fill:url(#radialGradient887);fill-opacity:1;stroke-width:0.4582718" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke-width:0.11250699"
+       id="rect4485"
+       width="115.20715"
+       height="115.20715"
+       x="145.59642"
+       y="142.57262"
+       ry="32.144852" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:87.58773804px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.18969345"
+       x="173.68294"
+       y="231.26984"
+       id="text4489"><tspan
+         sodipodi:role="line"
+         id="tspan4487"
+         x="173.68294"
+         y="231.26984"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'Rising Sun';-inkscape-font-specification:'Rising Sun Thin';fill:#ffffff;stroke-width:2.18969345">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:77.00411987px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.92510307"
+       x="128.30989"
+       y="386.71185"
+       id="text891"><tspan
+         sodipodi:role="line"
+         id="tspan889"
+         x="128.30989"
+         y="386.71185"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'Rising Sun';-inkscape-font-specification:'Rising Sun Thin';fill:#ffffff;stroke-width:1.92510307">Astir</tspan></text>
+    <text
+       id="text895"
+       y="420.28824"
+       x="39.296947"
+       style="font-style:normal;font-weight:normal;font-size:35.88027191px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.89700687"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'Rising Sun';-inkscape-font-specification:'Rising Sun Thin';fill:#ffffff;stroke-width:0.89700687"
+         y="420.28824"
+         x="39.296947"
+         id="tspan893"
+         sodipodi:role="line">cultura somos todos</tspan></text>
+  </g>
+</svg>
