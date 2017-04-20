@@ -15,3 +15,6 @@ Font Awesome Cheatsheet:
 
 'Esta aplicación usa la plantilla: nativescript-angular-drawer-template.' +
 'Para instalar: tns create my-project-name --template nativescript-angular-drawer-template';
+
+Modal Tutorial:
+* https://www.thepolyglotdeveloper.com/2017/01/using-modal-dialogs-nativescript-angular-mobile-application/

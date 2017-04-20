@@ -1,0 +1,29 @@
+<StackLayout>
+  <GridLayout rows="auto" columns="*" class="action-bar p-10">
+   <Label text="¿Qué estás buscando?" class="text-center action-bar-title modal-title" row="0" col="0"></Label>
+  </GridLayout>
+
+  <StackLayout
+    class="form">
+    <StackLayout class="input-field">
+      <Label class="label" text="Texto a buscar:"></Label>
+      <TextField
+        class="input"
+        [(ngModel)]="searchText">
+      </TextField>
+    </StackLayout>
+    <StackLayout class="input-field">
+      <Label class="label" text="Categoría:"></Label>
+      <ListPicker #picker class="p-15"
+        [items]="categories"
+        [selectedIndex]="selectedIndex"
+        (selectedIndexChange)="selectedIndexChanged(picker)">
+      </ListPicker>
+    </StackLayout>
+    <Button
+      class="btn btn-primary btn-rounded-sm"
+      text="¡Volver!"
+      (tap)="close('talk')">
+    </Button>
+  </StackLayout>
+</StackLayout>

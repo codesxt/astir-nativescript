@@ -16,7 +16,10 @@
 
 .action-bar {
   background-color: #AA0000;
-  font-family: "serif";
+}
+
+.modal-title{
+  font-family: "RisingSun-Light";
   font-weight: 100;
 }
 

@@ -1,9 +1,11 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ViewContainerRef } from '@angular/core';
+import { Observable, EventData } from 'data/observable';
+import { ModalDialogService } from "nativescript-angular/directives/dialogs";
+import { RouterExtensions } from 'nativescript-angular/router';
 import { Event } from "../../shared/event/event";
 import { EventListService } from "../../shared/event/event-list.service";
-import { Observable, EventData } from 'data/observable';
+import { EventFilterModalComponent } from '../event-filter/event-filter.modal';
 
-import { RouterExtensions } from 'nativescript-angular/router';
 
 import * as moment from "moment";
 moment.locale('es');
@@ -26,7 +28,9 @@ export class HomeComponent implements OnInit {
   iconSearch = String.fromCharCode(0xf002);
   constructor(
     private eventListService: EventListService,
-    private routerExtensions: RouterExtensions
+    private routerExtensions: RouterExtensions,
+    private modal: ModalDialogService,
+    private vcRef: ViewContainerRef
   ) {}
 
   showDetails(e){
@@ -59,6 +63,15 @@ export class HomeComponent implements OnInit {
 
   openFilter(args: EventData){
     console.log("Opening Filter...");
-    alert("Opening Filter...");
+    let options = {
+      context: {
+        filter: this.filter
+      },
+      fullscreen: true,
+      viewContainerRef: this.vcRef
+    };
+    this.modal.showModal(EventFilterModalComponent, options).then(res => {
+      this.filter = res;
+    });
   }
 }
