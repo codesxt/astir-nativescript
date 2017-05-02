@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ActivatedRoute } from "@angular/router";
 import { Event } from "../../shared/event/event";
+//import * as Calendar from "nativescript-calendar";
 
 @Component({
     selector: 'event-details',
@@ -15,7 +16,16 @@ export class EventDetailsComponent implements OnInit {
       private routerExtensions: RouterExtensions,
       private route: ActivatedRoute
     ) {
-
+      /*
+      Calendar.listCalendars().then(
+        function(calendars) {
+        console.log(JSON.stringify(calendars));
+      },
+      function(error) {
+        console.log("Error finding Calendars: " + error);
+      }
+      );
+      */
     }
 
     ngOnInit(){

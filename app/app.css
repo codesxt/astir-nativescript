@@ -39,7 +39,7 @@ Page {
  * Event List Styles
  */
 .event-list {
-  opacity: 0;
+  opacity: 1;
 }
 .event-ticket{
   background-color: #AA0000;

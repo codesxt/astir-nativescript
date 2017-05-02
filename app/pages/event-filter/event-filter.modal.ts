@@ -29,7 +29,6 @@ export class EventFilterModalComponent {
       this.categoryValues = [];
       this.searchText = "";
       this.pickedCategory = categoryList[0].value;
-      this.selectedIndex = 0;
       for (let i = 0; i < categoryList.length; i++) {
           this.categories.push(categoryList[i].name);
           this.categoryValues.push(categoryList[i].value);
@@ -43,7 +42,7 @@ export class EventFilterModalComponent {
         searchText: this.searchText,
         category: this.pickedCategory
       };
-      console.log("Texto:" + this.searchText);
+      console.log("Filter:\n"+JSON.stringify(filter, null, '\t'));
       this.params.closeCallback(filter);
     }
 
@@ -52,6 +51,5 @@ export class EventFilterModalComponent {
         picker.selectedIndex = 0;
       }
       this.pickedCategory = this.categoryValues[picker.selectedIndex];
-      this.selectedIndex = picker.selectedIndex;
     }
 }
