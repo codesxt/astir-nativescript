@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit, ViewContainerRef } from '@angular/core';
-import { Observable, EventData } from 'data/observable';
+//import { Observable, EventData } from 'data/observable';
 import { ModalDialogService } from "nativescript-angular/directives/dialogs";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { Event } from "../../shared/event/event";
@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  openFilter(args: EventData){
+  openFilter(args: any){
     console.log("Opening Filter...");
     let options = {
       context: {

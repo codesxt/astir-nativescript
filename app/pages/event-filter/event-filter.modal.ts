@@ -23,11 +23,13 @@ export class EventFilterModalComponent {
     public categories: Array<string>;
     public categoryValues: Array<string>;
     public pickedCategory: string;
+    public selectedIndex: number;
     public constructor(private params: ModalDialogParams) {
       this.categories = [];
       this.categoryValues = [];
       this.searchText = "";
       this.pickedCategory = categoryList[0].value;
+      this.selectedIndex = 0;
       for (let i = 0; i < categoryList.length; i++) {
           this.categories.push(categoryList[i].name);
           this.categoryValues.push(categoryList[i].value);
@@ -50,5 +52,6 @@ export class EventFilterModalComponent {
         picker.selectedIndex = 0;
       }
       this.pickedCategory = this.categoryValues[picker.selectedIndex];
+      this.selectedIndex = picker.selectedIndex;
     }
 }
