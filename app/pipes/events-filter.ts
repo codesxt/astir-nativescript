@@ -10,10 +10,11 @@ export class EventsFilterPipe implements PipeTransform{
     let category = ((params[1] != "") ? params[1] : "any");
     if(searchText == null) { return events; }
     let query = searchText.toLowerCase();
-        
+
     return events.filter(event =>
         (event.title.toLowerCase().indexOf(query) > -1) &&
         (event.category == category || category == "any")
+
     );
   }
 }
