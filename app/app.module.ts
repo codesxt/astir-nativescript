@@ -15,7 +15,7 @@ import { EventFilterModalComponent } from './pages/event-filter/event-filter.mod
 
 import { SharedModule } from './pages/shared';
 
-import {MomentModule} from 'angular2-moment';
+import { MomentModule } from 'angular2-moment';
 
 import { StringFormatPipe } from './pipes/string-format';
 import { CategoryTranslatePipe } from './pipes/category-translate';

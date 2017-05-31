@@ -12,6 +12,7 @@ moment.locale('es');
 
 @Component({
   selector: 'home',
+  moduleId: module.id,
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.Default,
   providers: [EventListService]

@@ -6,6 +6,7 @@ import * as Calendar from "nativescript-calendar";
 
 @Component({
     selector: 'event-details',
+    moduleId: module.id,
     templateUrl: './event-details.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -16,14 +17,16 @@ export class EventDetailsComponent implements OnInit {
       private routerExtensions: RouterExtensions,
       private route: ActivatedRoute
     ) {
+      /*
       Calendar.listCalendars().then(
         function(calendars) {
-        console.log(JSON.stringify(calendars));
-      },
-      function(error) {
-        console.log("Error finding Calendars: " + error);
-      }
+          console.log(JSON.stringify(calendars));
+        },
+        function(error) {
+          console.log("Error finding Calendars: " + error);
+        }
       );
+      */
     }
 
     ngOnInit(){

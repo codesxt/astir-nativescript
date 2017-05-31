@@ -16,6 +16,7 @@ let categoryList = [
 
 @Component({
     selector: "event-filter-modal",
+    moduleId: module.id,
     templateUrl: "event-filter.modal.html",
 })
 export class EventFilterModalComponent {
