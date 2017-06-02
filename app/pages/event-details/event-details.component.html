@@ -3,86 +3,120 @@
 </ActionBar>
 
 <side-drawer-page>
-  <Label
-      class="h1 page-text event-title m-5"
-      [text]="event.title"
-      textWrap="true">
-  </Label>
   <ScrollView orientation="vertical">
-    <StackLayout>
-      <TextView
-        [text]="event.description"
-        hint=""
-        [editable]="false"
-        class="input input-border event-description"></TextView>
-      <StackLayout class="m-x-10 m-y-5">
+    <StackLayout class="colored-page">
+      <GridLayout columns="40, *" rows="auto" class="details-page-header">
+        <StackLayout
+          col="0" row="0"
+          orientation="vertical"
+          class="details-page-header-date m-5">
+          <Label
+            [text]="event.when.start | amDateFormat:'DD'">
+          </Label>
+          <Label
+            [text]="event.when.start | amDateFormat:'MMM' | stringFormat:'capitalizeFirst'">
+          </Label>
+        </StackLayout>
+        <StackLayout
+          col="1" row="0"
+          orientation="horizontal">
+          <Label
+            [text]="event.title"
+            class="details-page-header-title h1 page-text m-5"
+            textWrap="true">
+          </Label>
+        </StackLayout>
+      </GridLayout>
+      <StackLayout
+        orientation="horizontal"
+        class="details-page-info">
         <Label
-          class="detail-label"
-          text="Categoría"
-          textWrap="true">
+          class="vertical-bar">
         </Label>
-        <Label
-          [text]="event.category | categoryTranslate"
-          textWrap="true">
-        </Label>
-      </StackLayout>
-      <StackLayout class="m-x-10 m-y-5">
-        <Label
-          class="detail-label"
-          text="Fecha"
-          textWrap="true">
-        </Label>
-        <Label
-          [text]="event.when.start | amDateFormat:'DD/MM/YYYY HH:mm'"
-          textWrap="true">
-        </Label>
-        <Label
-          class="detail-label"
-          text="Duración"
-          textWrap="true">
-        </Label>
-        <Label
-          [text]="(event.when.finish | amDifference : event.when.start : 'minutes') + ' minutos'"
-          textWrap="true">
-        </Label>
-      </StackLayout>
-      <StackLayout class="m-x-10 m-y-5">
-        <Label
-          class="detail-label"
-          text="Ubicación"
-          textWrap="true">
-        </Label>
-        <Label
-          [text]="event.where.address"
-          textWrap="true">
-        </Label>
-      </StackLayout>
-      <StackLayout class="m-x-10 m-y-5">
-        <Label
-          class="detail-label"
-          text="Costo"
-          textWrap="true">
-        </Label>
-        <Label
-          *ngIf="event.cost.length==0"
-          text="Entrada Liberada"
-          textWrap="true">
-        </Label>
-        <StackLayout *ngIf="event.cost.length>0">
-          <GridLayout
-            *ngFor="let cost of event.cost"
-            columns="*, auto">
+        <StackLayout>
+          <Label
+            [text]="event.description"
+            class="event-description m-5"
+            textWrap="true">
+          </Label>
+          <Label
+            class="detail-label"
+            text="Categoría"
+            textWrap="true">
+          </Label>
+          <Label
+            [text]="event.category | categoryTranslate"
+            class="m-5"
+            textWrap="true">
+          </Label>
+          <Label
+            class="detail-label"
+            text="Fecha"
+            textWrap="true">
+          </Label>
+          <Label
+            [text]="(event.when.start | amDateFormat:'DD/MM/YYYY HH:mm') + ' hrs.'"
+            class="m-5"
+            textWrap="true">
+          </Label>
+          <Label
+            class="detail-label"
+            text="Duración"
+            textWrap="true">
+          </Label>
+          <Label
+            [text]="(event.when.finish | amDifference : event.when.start : 'minutes') + ' minutos'"
+            class="m-5"
+            textWrap="true">
+          </Label>
+          <Label
+            class="detail-label"
+            text="Ubicación"
+            textWrap="true">
+          </Label>
+          <Label
+            [text]="event.where.address"
+            class="m-5"
+            textWrap="true">
+          </Label>
+
+          <StackLayout class="m-y-5">
             <Label
-              col="0"
-              [text]="cost.text"
+              class="detail-label"
+              text="Costo"
               textWrap="true">
             </Label>
             <Label
-              col="1"
-              [text]="'$'+cost.value"
+              *ngIf="event.cost.length==0"
+              text="Entrada Liberada"
+              class="m-5"
               textWrap="true">
             </Label>
-          </GridLayout>
+            <StackLayout *ngIf="event.cost.length>0">
+              <GridLayout
+                *ngFor="let cost of event.cost"
+                columns="*, *"
+                class="m-5">
+                <Label
+                  col="0"
+                  [text]="cost.text"
+                  textWrap="true">
+                </Label>
+                <Label
+                  col="1"
+                  [text]="'$'+cost.value"
+                  textWrap="true">
+                </Label>
+              </GridLayout>
+            </StackLayout>
+          </StackLayout>
+
+          <Button
+            text="Añadir a mi Agenda"
+            class="btn btn-primary"
+            (tap)="addToCalendar()">
+          </Button>
+
         </StackLayout>
       </StackLayout>
     </StackLayout>

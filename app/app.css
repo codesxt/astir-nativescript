@@ -1,6 +1,6 @@
 @import url('~/platform.css');
 @import "nativescript-theme-core/css/core.light.css";
-@import "nativescript-theme-core/css/forest.css";
+@import "nativescript-theme-core/css/ruby.css";
 
 .page-title {
   vertical-align: center;
@@ -16,6 +16,11 @@
 
 .action-bar {
   background-color: #AA0000;
+}
+
+.colored-page {
+  background-color: #AA0000;
+  color: #fff;
 }
 
 .modal-title{
@@ -60,18 +65,53 @@ Page {
 /*
  * Event Details Styles
  */
-.event-title{
-  font-family: "RisingSun-Light";
-}
+ .details-page-header {
+   border-color: #FFF;
+   border-width: 10px 0px 0px 10px;
+   margin-left: 20px;
+   margin-top: 10px;
+ }
+
+ .details-page-header-date {
+   margin-top: 100px;
+   vertical-align: bottom;
+ }
+
+ .details-page-header-title {
+   color: #FFF;
+ }
+
+ .details-page-info {
+   font-family: "RisingSun-Light";
+   background-color: #FFF;
+   color: #000;
+ }
+
+ .vertical-bar {
+   border-left-width: 10px;
+   border-color: #A00;
+   margin-left: 20px;
+ }
+
+ .detail-label {
+   padding: 10px;
+   margin-right: 50px;
+   background-color: #A00;
+   font-weight: bold;
+   color: white;
+ }
+
 .event-description{
   font-family: "RisingSun-Light";
   font-size: 14;
 }
 
-.detail-label {
-  font-weight: bold;
-  color: black;
+.btn {
+  background-color: #A00;
+  color: #FFF;
 }
+
+
 
 /*
  * Animation Definitions
@@ -92,6 +132,11 @@ Page {
 .icon {
    font-family: 'fontawesome-webfont';
    font-size: 32;
+}
+.icon-white {
+   font-family: 'fontawesome-webfont';
+   font-size: 32;
+   color: white;
 }
 
 /*

@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         clearHistory: false,
         transition: {
             name: "slide",
-            duration: 500,
+            duration: 250,
             curve: "linear"
         },
         queryParams: {
@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
       context: {
         filter: this.filter
       },
-      fullscreen: true,
+      fullscreen: false,
       viewContainerRef: this.vcRef
     };
     this.modal.showModal(EventFilterModalComponent, options).then(res => {

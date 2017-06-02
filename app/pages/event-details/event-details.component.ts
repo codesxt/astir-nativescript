@@ -1,8 +1,10 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ViewContainerRef } from '@angular/core';
+import { ModalDialogService } from "nativescript-angular/directives/dialogs";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ActivatedRoute } from "@angular/router";
 import { Event } from "../../shared/event/event";
-import * as Calendar from "nativescript-calendar";
+
+import { CalendarModalComponent } from "../calendar-modal/calendar.modal";
 
 @Component({
     selector: 'event-details',
@@ -13,20 +15,13 @@ import * as Calendar from "nativescript-calendar";
 export class EventDetailsComponent implements OnInit {
     text: string = 'Detalles del Evento';
     event: Event = null;
+
     constructor(
       private routerExtensions: RouterExtensions,
-      private route: ActivatedRoute
+      private route: ActivatedRoute,
+      private modal: ModalDialogService,
+      private vcRef: ViewContainerRef
     ) {
-      /*
-      Calendar.listCalendars().then(
-        function(calendars) {
-          console.log(JSON.stringify(calendars));
-        },
-        function(error) {
-          console.log("Error finding Calendars: " + error);
-        }
-      );
-      */
     }
 
     ngOnInit(){
@@ -37,5 +32,18 @@ export class EventDetailsComponent implements OnInit {
 
     goBack() {
       this.routerExtensions.back();
+    }
+
+    addToCalendar(){
+      let options = {
+        context: {
+          eventData: this.event
+        },
+        fullscreen: false,
+        viewContainerRef: this.vcRef
+      };
+      this.modal.showModal(CalendarModalComponent, options).then(res => {
+
+      });
     }
 }

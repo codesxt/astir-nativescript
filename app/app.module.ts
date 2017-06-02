@@ -12,6 +12,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EventDetailsComponent } from './pages/event-details/event-details.component';
 import { EventFilterModalComponent } from './pages/event-filter/event-filter.modal';
+import { CalendarModalComponent } from './pages/calendar-modal/calendar.modal';
+
 
 import { SharedModule } from './pages/shared';
 
@@ -31,7 +33,8 @@ import { EventsFilterPipe } from './pipes/events-filter';
     StringFormatPipe,
     CategoryTranslatePipe,
     EventsFilterPipe,
-    EventFilterModalComponent
+    EventFilterModalComponent,
+    CalendarModalComponent
   ],
   imports: [
     NativeScriptModule,
@@ -42,7 +45,8 @@ import { EventsFilterPipe } from './pipes/events-filter';
     NativeScriptFormsModule
   ],
   entryComponents: [
-    EventFilterModalComponent
+    EventFilterModalComponent,
+    CalendarModalComponent
   ],
   providers: [ModalDialogService],
   bootstrap: [AppComponent],

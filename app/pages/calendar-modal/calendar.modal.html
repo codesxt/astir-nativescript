@@ -1,0 +1,29 @@
+<StackLayout>
+  <GridLayout rows="auto" columns="*" class="action-bar p-10">
+   <Label text="Añadir al calendario" class="text-center action-bar-title modal-title" row="0" col="0"></Label>
+  </GridLayout>
+
+  <StackLayout
+    class="form p-10">
+    <Label class="label" text="Evento:"></Label>
+    <Label [text]="eventData.title"></Label>
+    <Label class="label" text="Seleccione el calendario:"></Label>
+    <ListPicker [items]="calendarNames" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" class="p-15"></ListPicker>
+    <GridLayout
+      columns="*, *" rows="auto">
+      <Button
+        col="0" row="0"
+        class="btn btn-primary"
+        text="Añadir"
+        (tap)="addEvent()">
+      </Button>
+
+      <Button
+        col="1" row="0"
+        class="btn btn-primary"
+        text="Cerrar"
+        (tap)="close()">
+      </Button>
+    </GridLayout>
+  </StackLayout>
+</StackLayout>
