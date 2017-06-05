@@ -20,7 +20,7 @@ export class EventListService {
     .map(res => res.json())
     .map(data => {
       let eventList = [];
-      data.forEach((event) => {
+      data.data.forEach((event) => {
         eventList.push(new Event(
           event.id,
           event.title,
